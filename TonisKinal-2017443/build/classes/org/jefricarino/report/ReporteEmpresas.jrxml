@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpresas" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ed479800-a9ea-4076-8d1b-c257b612ebca">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarEmpresas]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="101" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="572" height="91" uuid="9720c14d-83ae-4531-97b3-52b849964b63"/>
+				<imageExpression><![CDATA["C:\\Users\\Osman\\Documents\\NetBeansProjects\\TonisKinal-2017443\\src\\org\\jefricarino\\image\\Encabezado 1.gif"]]></imageExpression>
+			</image>
+			<line direction="BottomUp">
+				<reportElement x="1" y="46" width="1" height="45" uuid="82531083-7ffd-43a0-8b55-f2aa12ce472d"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="18" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="-10" width="572" height="1" backcolor="#000000" uuid="c15f29f5-b234-4955-b79e-ca944e374320"/>
+				<graphicElement>
+					<pen lineWidth="2.25"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="2" width="571" height="20" forecolor="#FF9933" backcolor="#FF9933" uuid="e61d9a63-d6bc-49ee-9d9d-acf65e56f8f9"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="21" y="2" width="100" height="20" forecolor="#FFFFFF" uuid="5e9b1194-ea61-40d6-b1ac-752d6c7b45b2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Codigo Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="161" y="2" width="120" height="20" forecolor="#FFFFFF" uuid="a7c9b7e4-aa83-4e04-bd86-69ee86f51599"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Nombre Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="2" width="73" height="20" forecolor="#FFFFFF" uuid="b9424057-0cb7-4a50-b302-11b2c93082a7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Direccion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="453" y="2" width="100" height="20" forecolor="#FFFFFF" uuid="8c520129-2891-4f74-a615-89e1437b6186"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Telefono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<rectangle>
+				<reportElement x="1" y="6" width="569" height="23" uuid="663675f1-9853-4ec1-a389-fb5e36aecf4f"/>
+				<graphicElement>
+					<pen lineWidth="1.75" lineColor="#FF9933"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="23" y="8" width="100" height="20" uuid="69e9f8dc-1745-4c05-8a62-2f74a0b6f5d1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="166" y="8" width="100" height="20" uuid="221857a4-288d-4596-a064-426e3ce6510a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="8" width="100" height="20" uuid="e2f97831-59cc-4d25-b80c-149290754af4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="448" y="7" width="100" height="20" uuid="8edde2a2-9cfe-4334-a1c0-d90b51a18f2a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="76" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="472" y="40" width="100" height="20" uuid="948629e6-c4ff-43f5-a7f1-ac70f9d913dc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Jeoffrey Carino]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="56" width="100" height="20" uuid="2c5ff269-f915-454d-8af0-7b23abd1fe55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Gerente General]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="478" y="1" width="83" height="40" uuid="8ad2865e-1d12-4ea7-a452-ef4ed0f76876"/>
+				<imageExpression><![CDATA["C:\\Users\\Osman\\Documents\\NetBeansProjects\\TonisKinal-2017443\\src\\org\\jefricarino\\image\\Firma.gif"]]></imageExpression>
+			</image>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="72" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="572" height="72" uuid="53d4e29c-93ef-4dff-aff4-f1b23ef5d6c8"/>
+				<imageExpression><![CDATA["C:\\Users\\Osman\\Documents\\NetBeansProjects\\TonisKinal-2017443\\src\\org\\jefricarino\\image\\Page Footer.gif"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

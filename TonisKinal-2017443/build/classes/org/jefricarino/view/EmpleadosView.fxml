@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="956.0" style="-fx-background-color: #febd49;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jefricarino.controller.EmpleadosController">
+   <children>
+      <Label layoutX="770.0" layoutY="-6.0" prefHeight="87.0" prefWidth="173.0" text="Empleados" textAlignment="CENTER" textFill="#3c382b">
+         <font>
+            <Font name="Freestyle Script" size="63.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblEmpleados" layoutX="14.0" layoutY="218.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="222.0" prefWidth="928.0">
+        <columns>
+          <TableColumn fx:id="colCodigoEmpleado" prefWidth="91.0" text="ID Empleado" />
+          <TableColumn fx:id="colNumeroEmpleado" prefWidth="135.0" text="No. Empleado" />
+            <TableColumn fx:id="colNombreEmpleado" prefWidth="126.0" text="Nombres" />
+            <TableColumn fx:id="colApellidoEmpleado" prefWidth="125.0" text="Apellidos" />
+            <TableColumn fx:id="colGradoCocinero" prefWidth="95.0" text="Grado" />
+            <TableColumn fx:id="colDireccionEmpleado" prefWidth="159.0" text="Direccion" />
+            <TableColumn fx:id="colTelefonoContacto" prefWidth="87.0" text="Telefono" />
+            <TableColumn fx:id="colCodigoTipoEmpleado" prefWidth="108.0" text="ID TipoEmpleado" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="80.0" layoutY="452.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="35.0" prefWidth="138.0" text="Nuevo">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="261.0" layoutY="452.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="35.0" prefWidth="138.0" text="Eliminar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="560.0" layoutY="453.0" mnemonicParsing="false" onAction="#editar" prefHeight="35.0" prefWidth="138.0" text="Editar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="740.0" layoutY="452.0" mnemonicParsing="false" onAction="#reporte" prefHeight="35.0" prefWidth="138.0" text="Reporte">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <GridPane layoutX="68.0" layoutY="89.0" prefHeight="120.0" prefWidth="776.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Codigo Empleado" textFill="#b59a4c">
+               <effect>
+                  <InnerShadow color="#363431" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Label text="No. Empleado" textFill="#b59a4c" GridPane.rowIndex="1">
+               <effect>
+                  <InnerShadow color="#363431" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Label text="Nombres" textFill="#b59a4c" GridPane.rowIndex="2">
+               <effect>
+                  <InnerShadow color="#363431" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Label text="Apellidos" textFill="#b59a4c" GridPane.rowIndex="3">
+               <effect>
+                  <InnerShadow color="#363431" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Label text="Grado" textFill="#b59a4c" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <effect>
+                  <InnerShadow color="#363431" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Label text="Direccion" textFill="#b59a4c" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <effect>
+                  <InnerShadow color="#363431" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Label text="Telefono" textFill="#b59a4c" GridPane.columnIndex="2">
+               <effect>
+                  <InnerShadow color="#363431" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Label text="Codigo Tipo Empleado" textFill="#b59a4c" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <effect>
+                  <InnerShadow color="#363431" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtNumeroEmpleado" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtNombreEmpleado" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtApellidoEmpleado" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtTelefonoContacto" editable="false" GridPane.columnIndex="3" />
+            <TextField fx:id="txtCodigoEmpleado" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txtGradoCocinero" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField fx:id="txtDireccionEmpleado" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cmbCodigoTipoEmpleado" disable="true" prefHeight="25.0" prefWidth="197.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <HBox prefHeight="39.0" prefWidth="736.0" style="-fx-background-color: #E7EBDA;">
+         <children>
+            <Label prefHeight="39.0" prefWidth="45.0" text="❒">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Button fx:id="btnTipoEmpleado" mnemonicParsing="false" onAction="#ventanaTipoEmpleado" prefHeight="38.0" prefWidth="164.0" style="-fx-background-color: #E7EBDA;" styleClass="menubar1" stylesheets="@../resource/Style.css" text=" ☶ Tipo Empleado">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnServiEmp" mnemonicParsing="false" onAction="#ventanaServicio_has_Empleados" prefHeight="38.0" prefWidth="173.0" style="-fx-background-color: #E7EBDA;" styleClass="menubar2" stylesheets="@../resource/Style.css" text="🔧 Servicios_has_Empleados">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnMenuPrincipal" layoutX="396.0" layoutY="10.0" mnemonicParsing="false" onAction="#menuPrincipal" prefHeight="38.0" prefWidth="164.0" style="-fx-background-color: #E7EBDA;" styleClass="menubar4" stylesheets="@../resource/Style.css" text="☗ Menu Principal">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

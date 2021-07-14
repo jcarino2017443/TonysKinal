@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporterTipoPlato" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="04c7e672-8c66-422d-ad09-7612ad4c9ac1">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarTipoPlatos]]>
+	</queryString>
+	<field name="codigoTipoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="103" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="1" y="-10" width="553" height="113" uuid="896a4c60-226a-4caa-a0d1-2b07acf90c19"/>
+				<imageExpression><![CDATA["C:\\Users\\Osman\\Documents\\NetBeansProjects\\TonisKinal-2017443\\src\\org\\jefricarino\\image\\Encabezado TipoPlato.gif"]]></imageExpression>
+			</image>
+			<line direction="BottomUp">
+				<reportElement x="2" y="58" width="1" height="45" uuid="83c364bc-c5e9-485f-b982-ad9907cfa06c"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="17" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<line>
+				<reportElement x="2" y="-17" width="552" height="1" backcolor="#000000" uuid="2f9fb1f7-0d31-493c-a695-67517267c679"/>
+				<graphicElement>
+					<pen lineWidth="2.25"/>
+				</graphicElement>
+			</line>
+			<rectangle radius="10">
+				<reportElement x="2" y="8" width="553" height="20" forecolor="#FF9933" backcolor="#FF9933" uuid="99c4f8c1-9a0a-4418-8af3-2cdca3f10b39"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="73" y="9" width="100" height="20" forecolor="#FFFFFF" uuid="833f8191-2dd3-43c4-9a46-fee5892a7e4c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Codigo TipoPlato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="9" width="100" height="20" forecolor="#FFFFFF" uuid="0e5107c6-d206-4f32-82b6-951b5619437a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripcion]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<rectangle>
+				<reportElement x="1" y="4" width="553" height="25" uuid="53b9b29b-f07c-4299-bd10-0df7db283451"/>
+				<graphicElement>
+					<pen lineWidth="1.75" lineColor="#FF9933"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="73" y="7" width="100" height="20" uuid="e5458edf-3f95-47c4-8cff-fbd7baeac342"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{codigoTipoPlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="325" y="7" width="102" height="20" uuid="d95f2ae9-8748-4150-87a4-f7ceab923147"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="74" splitType="Stretch">
+			<staticText>
+				<reportElement x="454" y="52" width="100" height="20" uuid="5a4c0f81-4366-40b6-9b8b-2fd12c069628"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Gerente General]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="459" y="-2" width="83" height="40" uuid="0d18c586-2b99-4394-a22c-e55810303ea2"/>
+				<imageExpression><![CDATA["C:\\Users\\Osman\\Documents\\NetBeansProjects\\TonisKinal-2017443\\src\\org\\jefricarino\\image\\Firma.gif"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="454" y="37" width="100" height="20" uuid="bd4da97d-8e88-4a9e-a0c7-2b48c2cad97c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Jeoffrey Carino]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="2" y="2" width="572" height="76" uuid="6153dcd7-90c5-4bff-b9c1-4920bd37c992"/>
+				<imageExpression><![CDATA["C:\\Users\\Osman\\Documents\\NetBeansProjects\\TonisKinal-2017443\\src\\org\\jefricarino\\image\\Page Footer.gif"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

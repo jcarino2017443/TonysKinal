@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteProductos" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="999eeb64-2512-4c3d-8784-343767a2e9c1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarProductos;]]>
+	</queryString>
+	<field name="codigoProducto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreProducto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="97" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="572" height="97" uuid="41255411-c4cf-40d0-9bbb-f8ca11409d38"/>
+				<imageExpression><![CDATA["C:\\Users\\Osman\\Documents\\NetBeansProjects\\TonisKinal-2017443\\src\\org\\jefricarino\\image\\Encabezado Presupuestos.gif"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="22" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="0" width="572" height="1" backcolor="#000000" uuid="61e819cd-8d56-442f-b700-872c92a553d6"/>
+				<graphicElement>
+					<pen lineWidth="2.25"/>
+				</graphicElement>
+			</line>
+			<line direction="BottomUp">
+				<reportElement x="1" y="-49" width="1" height="48" uuid="5836a624-b620-420f-959a-d89ba0ddad8e"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="10" width="572" height="20" forecolor="#FF9933" backcolor="#FF9933" uuid="90ed1070-9ce3-4dd0-a12f-e819f599867c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="36" y="9" width="100" height="20" forecolor="#FFFFFF" uuid="6237fad8-b8cc-4e5a-93b8-e9a21ba743d4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Codigo Producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="9" width="100" height="20" forecolor="#FFFFFF" uuid="69cfc74d-abff-44de-9511-fdfa0d4833db"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Nombre Producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="407" y="10" width="100" height="20" forecolor="#FFFFFF" uuid="0e747fb3-d61d-4212-b818-59c3307f4464"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement mode="Transparent" x="1" y="32" width="571" height="1" forecolor="#FF9933" backcolor="#FF9933" uuid="fa5e2b48-e25e-4915-83e4-538066497cfd"/>
+				<graphicElement>
+					<pen lineWidth="1.75" lineStyle="Solid" lineColor="#FF9933"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="40" y="8" width="100" height="20" uuid="8886faae-4053-4445-99c5-ff9f828a64ac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{codigoProducto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="8" width="100" height="20" uuid="9ffa2238-f6f5-42ef-b9d7-18756b235be3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombreProducto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="406" y="7" width="100" height="20" uuid="129a54a2-4dbc-455f-87ca-3bb7183caee1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement mode="Transparent" x="1" y="3" width="571" height="1" forecolor="#FF9933" backcolor="#FF9933" uuid="a342fa3a-0272-466b-ad29-b235c7158fa4"/>
+				<graphicElement>
+					<pen lineWidth="1.75" lineStyle="Solid" lineColor="#FF9933"/>
+				</graphicElement>
+			</line>
+			<line direction="BottomUp">
+				<reportElement x="571" y="4" width="1" height="28" forecolor="#FF9933" uuid="f0a9a12c-83e7-429f-9433-689e69ffee36"/>
+			</line>
+			<line direction="BottomUp">
+				<reportElement x="0" y="3" width="1" height="30" forecolor="#FF9933" uuid="bcd70439-50d6-426a-bf6d-ab6b4c48f371"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="75" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="476" y="0" width="83" height="40" uuid="54a54de5-f305-4128-9999-987a6533aed7"/>
+				<imageExpression><![CDATA["C:\\Users\\Osman\\Documents\\NetBeansProjects\\TonisKinal-2017443\\src\\org\\jefricarino\\image\\Firma.gif"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="469" y="39" width="100" height="20" uuid="7f3065ee-19e4-4e67-a90b-30879d8c6e1f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Jeoffrey Carino]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="469" y="55" width="100" height="20" uuid="d0b5feb4-7f20-4909-93c4-a5bad5b6cb11"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Gerente General]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="73" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="572" height="73" uuid="04e90a29-7d9c-4f4c-9e76-12ef5344926c"/>
+				<imageExpression><![CDATA["C:\\Users\\Osman\\Documents\\NetBeansProjects\\TonisKinal-2017443\\src\\org\\jefricarino\\image\\Page Footer.gif"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="617.0" style="-fx-background-color: #febd49;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jefricarino.controller.PlatosController">
+   <children>
+      <Label layoutX="257.0" layoutY="50.0" prefHeight="87.0" prefWidth="123.0" text="Platos" textFill="#3c382b">
+         <effect>
+            <InnerShadow choke="0.09" color="#c67f15">
+               <input>
+                  <DropShadow />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font name="Freestyle Script" size="63.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="18.0" layoutY="133.0" prefHeight="90.0" prefWidth="565.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="txtCodigoPlato" editable="false" GridPane.columnIndex="1">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <TextField fx:id="txtDescripcionPlato" editable="false" GridPane.columnIndex="3">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <TextField fx:id="txtPrecioPlato" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <TextField fx:id="txtCantidadPlato" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <TextField fx:id="txtNombrePlato" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <ComboBox fx:id="cmbCodigoTipoPlato" disable="true" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ComboBox>
+            <Label text="Codigo Plato" textFill="#b59a4c">
+               <effect>
+                  <InnerShadow color="#363431" />
+               </effect>
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="14.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Cantidad" textFill="#b59a4c" GridPane.rowIndex="1">
+               <effect>
+                  <InnerShadow color="#363431" />
+               </effect>
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="14.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Nombre Plato" textFill="#b59a4c" GridPane.rowIndex="2">
+               <effect>
+                  <InnerShadow color="#363431" />
+               </effect>
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="14.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Descripcion" textFill="#b59a4c" GridPane.columnIndex="2">
+               <effect>
+                  <InnerShadow color="#363431" />
+               </effect>
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="18.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Precio Plato" textFill="#b59a4c" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <effect>
+                  <InnerShadow color="#363431" />
+               </effect>
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="18.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Codigo TipoPlato" textFill="#b59a4c" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <effect>
+                  <InnerShadow color="#363431" />
+               </effect>
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="18.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+      <TableView fx:id="tblPlatos" layoutX="17.0" layoutY="239.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="229.0" prefWidth="587.0">
+        <columns>
+          <TableColumn fx:id="colCodigoPlato" prefWidth="90.0" text="Codigo Plato" />
+          <TableColumn fx:id="colCantidadPlato" prefWidth="78.0" text="Cantidad" />
+            <TableColumn fx:id="colNombrePlato" prefWidth="107.0" text="Nombre Plato" />
+            <TableColumn fx:id="colDescripcionPlato" prefWidth="115.0" text="Descripcion" />
+            <TableColumn fx:id="colPrecioPlato" prefWidth="83.0" text="Precio" />
+            <TableColumn fx:id="colCodigoTipoPlato" prefWidth="113.0" text="Codigo TipoPlato" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="18.0" layoutY="478.0" prefHeight="30.0" prefWidth="587.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="30.0" prefWidth="100.0" text="Eliminar" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="30.0" prefWidth="100.0" text="Nuevo">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#editar" prefHeight="30.0" prefWidth="100.0" text="Editar" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button fx:id="btnReporte" mnemonicParsing="false" onAction="#reporte" prefHeight="30.0" prefWidth="100.0" text="Reporte" GridPane.columnIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+         </children>
+      </GridPane>
+      <HBox prefHeight="63.0" prefWidth="617.0" style="-fx-background-color: white;">
+         <children>
+            <Label alignment="BASELINE_LEFT" contentDisplay="CENTER" prefHeight="61.0" prefWidth="27.0">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Button fx:id="btnTipoPlato" mnemonicParsing="false" onAction="#ventanaTipoPlato" prefHeight="66.0" prefWidth="147.0" style="-fx-background-color: #E7EBDA;" styleClass="menubar1" stylesheets="@../resource/Style.css" text=" ☶ Tipo Platos">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnServiPlat" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#ventanaServicio_has_Plato" prefHeight="66.0" prefWidth="147.0" style="-fx-background-color: #E7EBDA;" styleClass="menubar2" stylesheets="@../resource/Style.css" text="👥   Servicios&#10;           has&#10;         Platos">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnProduPlat" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#ventanaProductos_has_Platos" prefHeight="66.0" prefWidth="147.0" style="-fx-background-color: #E7EBDA;" styleClass="menubar3" stylesheets="@../resource/Style.css" text="☕   Productos&#10;            has&#10;         Platos">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnMenuPrincipal" layoutX="396.0" layoutY="10.0" mnemonicParsing="false" onAction="#menuPrincipal" prefHeight="63.0" prefWidth="152.0" style="-fx-background-color: #E7EBDA;" styleClass="menubar4" stylesheets="@../resource/Style.css" text="☗ Menu Principal">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

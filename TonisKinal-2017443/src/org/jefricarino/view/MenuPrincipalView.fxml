@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="319.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jefricarino.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="320.0" fitWidth="396.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/IMG_20200427_214929.jpg" />
+         </image></ImageView>
+      <MenuBar layoutX="75.0" layoutY="-1.0" prefHeight="28.0" prefWidth="222.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProductos" text="Productos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaEmpresas" text="Empresas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoEmpleado" text="Tipo Empleados" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoPlato" text="Tipo Platos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text=" Reportes">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ImprimirReporte" text="Reporte Empresa" />
+                  <MenuItem mnemonicParsing="false" onAction="#ReporteProductos" text="Reporte Productos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ReporteTipoPlatos" text="Reporte Tipo Platos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Acerca de ">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaDatosProgramador" text="Programador" />
+            </items>
+          </Menu>
+        </menus>
+         <effect>
+            <SepiaTone>
+               <input>
+                  <Blend />
+               </input>
+            </SepiaTone>
+         </effect>
+      </MenuBar>
+   </children>
+</AnchorPane>
